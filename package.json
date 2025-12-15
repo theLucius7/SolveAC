@@ -2,6 +2,7 @@
   "name": "solveac-theme",
   "version": "0.1.0",
   "description": "HydroOJ UI plugin for SolveAC",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc"
   },
