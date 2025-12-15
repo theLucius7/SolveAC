@@ -1,0 +1,13 @@
+{
+  "name": "solveac-theme",
+  "version": "0.1.0",
+  "description": "HydroOJ UI plugin for SolveAC",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
