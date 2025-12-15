@@ -4,6 +4,9 @@ const templateDir = path.resolve(__dirname, '..', 'templates');
 const frontendDir = path.resolve(__dirname, '..', 'frontend');
 const localesDir = path.resolve(__dirname, '..', 'locales');
 const publicDir = path.resolve(__dirname, '..', 'public');
+import { fileURLToPath } from 'node:url';
+
+const templateDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'templates');
 
 /**
  * Register the template override directory so Hydro can pick up

@@ -76,3 +76,4 @@ npm run build
 ## 工作方式
 - 插件会在加载时向 HydroUI 注入 `templates/` 目录，使运行时优先使用 SolveAC 提供的模板。
 - `templates/components/footer.html` 覆盖了默认页脚模板，从根源上移除了 `.footer__links` 行，无需额外的前端脚本清理。
+- `templates/components/footer.njk` 覆盖了默认页脚模板，从根源上移除了 `.footer__links` 行，无需额外的前端脚本清理。

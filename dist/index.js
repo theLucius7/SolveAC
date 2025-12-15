@@ -9,6 +9,9 @@ const templateDir = node_path_1.default.resolve(__dirname, '..', 'templates');
 const frontendDir = node_path_1.default.resolve(__dirname, '..', 'frontend');
 const localesDir = node_path_1.default.resolve(__dirname, '..', 'locales');
 const publicDir = node_path_1.default.resolve(__dirname, '..', 'public');
+exports.templates = exports.apply = void 0;
+const node_path_1 = __importDefault(require("node:path"));
+const templateDir = node_path_1.default.resolve(__dirname, '..', 'templates');
 /**
  * Register the template override directory so Hydro can pick up
  * SolveAC-specific UI tweaks before falling back to the defaults.
