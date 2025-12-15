@@ -2,6 +2,13 @@
 
 本文档介绍如何在已部署好的 HydroOJ 上启用、更新或关闭 SolveAC 前端插件。插件通过覆盖 HydroUI 模板移除默认页脚中的 `footer__links` 行，使页脚更简洁，并保留 SolveAC 的品牌信息。
 
+仓库根目录按照 Hydro UI 默认包的结构组织：
+
+- `frontend/`：SolveAC 的页面样式注入脚本（无需构建即可被 Hydro 加载）。
+- `locales/`：保留给后续国际化文案的目录。
+- `public/`：可选的静态资源目录。
+- `templates/`：需从 [Hydro 官方仓库](https://github.com/hydro-dev/Hydro/tree/master/packages/ui-default/templates) 拷贝的模板，以及 SolveAC 的页脚覆盖。
+
 ## 前置条件
 - 已经安装并运行中的 HydroOJ（含默认前端）。
 - 具备 HydroOJ CLI（`hydrooj`）的使用权限，用于管理插件。

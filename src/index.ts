@@ -1,6 +1,9 @@
 import path from 'node:path';
 
 const templateDir = path.resolve(__dirname, '..', 'templates');
+const frontendDir = path.resolve(__dirname, '..', 'frontend');
+const localesDir = path.resolve(__dirname, '..', 'locales');
+const publicDir = path.resolve(__dirname, '..', 'public');
 import { fileURLToPath } from 'node:url';
 
 const templateDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'templates');
@@ -34,4 +37,7 @@ export const apply = (ctx: any): void => {
 };
 
 export const templates = templateDir;
+export const frontend = frontendDir;
+export const locales = localesDir;
+export const publicDirPath = publicDir;
 export default apply;
