@@ -1,0 +1,21 @@
+{#
+  Custom footer for SolveAC that removes the default footer links row while
+  keeping the remaining layout consistent with HydroUI.
+#}
+<footer class="footer">
+  <div class="footer__meta container">
+    <div class="footer__brand">
+      <span class="footer__title">{{ config.title or 'HydroOJ' }}</span>
+      {% if config.footer and config.footer.subtitle %}
+        <span class="footer__subtitle">{{ config.footer.subtitle }}</span>
+      {% endif %}
+    </div>
+    <div class="footer__info">
+      {% if config.footer and config.footer.copyright %}
+        {{ config.footer.copyright | safe }}
+      {% else %}
+        Powered by <a href="https://hydro.ac" target="_blank" rel="noopener">HydroOJ</a>
+      {% endif %}
+    </div>
+  </div>
+</footer>
