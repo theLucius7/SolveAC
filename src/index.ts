@@ -2,6 +2,7 @@ import path from 'node:path';
 
 const templateDir = path.resolve(__dirname, '..', 'templates');
 const frontendDir = path.resolve(__dirname, '..', 'frontend');
+const publicDir = path.resolve(__dirname, '..', 'public');
 const localesDir = path.resolve(__dirname, '..', 'locales');
 const publicDir = path.resolve(__dirname, '..', 'public');
 import { fileURLToPath } from 'node:url';
@@ -38,6 +39,9 @@ export const apply = (ctx: any): void => {
 
 export const templates = templateDir;
 export const frontend = frontendDir;
+// Locales directory is exposed for Hydro's loader. Keep at least one valid
+// locale file in place (e.g., locales/en.yaml) to avoid runtime load errors.
+export const locales = path.resolve(__dirname, '..', 'locales');
 export const locales = localesDir;
 export const publicDirPath = publicDir;
 export default apply;

@@ -5,6 +5,7 @@
 仓库根目录按照 Hydro UI 默认包的结构组织：
 
 - `frontend/`：SolveAC 的页面样式注入脚本（无需构建即可被 Hydro 加载）。
+- `locales/`：保留给后续国际化文案的目录（包含空的 `en.yaml`，防止 Hydro 报告“Locale load fail”）。
 - `locales/`：保留给后续国际化文案的目录。
 - `public/`：可选的静态资源目录。
 - `templates/`：需从 [Hydro 官方仓库](https://github.com/hydro-dev/Hydro/tree/master/packages/ui-default/templates) 拷贝的模板，以及 SolveAC 的页脚覆盖。

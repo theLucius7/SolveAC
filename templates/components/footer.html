@@ -1,3 +1,50 @@
+<div class="footer">
+  <div class="row"><div class="columns">
+    <div class="footer__extra-link clearfix">
+      <div class="footer__extra-left">
+        <ol class="clearfix">
+          <li class="footer__extra-link-item"><a href="https://www.noi.cn/">NOI 官网</a></li>
+          <li class="footer__extra-link-item"><a href="https://oier.baoshuo.dev/">OIer Db</a></li>
+          <li class="footer__extra-link-item"><a href="https://oi-wiki.org/">OI Wiki</a></li>
+          <li class="footer__extra-link-item nojs--hide" data-dropdown-target="#menu-footer-lang">
+            <span><span class="icon icon-global"></span> Language <span class="icon icon-expand_less"></span></span>
+            <ol class="dropdown-target menu" id="menu-footer-lang">
+            {%- for k, v in model.setting.SETTINGS_BY_KEY['viewLang'].range -%}
+              <li class="menu__item"><a class="menu__link" href="{{ url('switch_language', lang=k) }}">{{ v }}</a></li>
+            {%- endfor -%}
+            </ol>
+          </li>
+          <li class="footer__extra-link-item nojs--hide" data-dropdown-target="#menu-footer-theme">
+            <span><span class="icon icon-global"></span> {{ _('Theme') }} <span class="icon icon-expand_less"></span></span>
+            <ol class="dropdown-target menu" id="menu-footer-theme">
+              <li class="menu__item"><a class="menu__link" href="{{ url('set_theme', theme='light') }}">{{ _('Light') }}</a></li>
+              <li class="menu__item"><a class="menu__link" href="{{ url('set_theme', theme='dark') }}">{{ _('Dark') }}</a></li>
+            </ol>
+          </li>
+          <li class="footer__extra-link-item">
+            {% if handler.session.legacy %}
+              <a href="/legacy">{{ _('Standard mode') }}</a>
+            {% else %}
+              <a href="/legacy?legacy=true">{{ _('Legacy mode') }}</a>
+            {% endif %}
+          </li>
+        </ol>
+      </div>
+      <div class="footer__extra-right">
+        <ol class="clearfix">
+          {%- for html in (handler.domain.ui.footer_extra_html|default('')).split('\n') -%}
+            <li class="footer__extra-link-item">{{ html|safe }}</li>
+          {%- endfor -%}
+          {%- for html in (model.system.get('ui-default.footer_extra_html')|default('')).split('\n') -%}
+            <li class="footer__extra-link-item">{{ html|safe }}</li>
+          {%- endfor -%}
+          <li class="footer__extra-link-item">Worker {{ process.env.NODE_APP_INSTANCE }}, {{ Date.now() - handler.args.__start }}ms</li>
+          <li class="footer__extra-link-item">Powered by <a href="https://hydro.js.org">Hydro v{{ global.Hydro.version.hydrooj }}</a> {{ "Professional" if model.system.get('server.pro') else "Community" }}</li>
+        </ol>
+      </div>
+    </div>
+  </div></div>
+</div>
 {#
   Custom footer for SolveAC that removes the default footer links row while
   keeping the remaining layout consistent with HydroUI.
