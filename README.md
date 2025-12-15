@@ -6,6 +6,7 @@ HydroOJ 的前端主题插件，主要用于 bool.solve.ac。
 
 - `frontend/`：在页面上注入 SolveAC 的自定义样式。
 - `locales/`：为后续本地化扩展预留的目录（提供了空的 `en.yaml` 以避免 Hydro 在加载插件时提示 Locale 失败）。
+- `locales/`：为后续本地化扩展预留的目录。
 - `public/`：静态资源目录。
 - `templates/`：从 Hydro 默认 UI 拷贝的模板及 SolveAC 的页脚覆盖。
 

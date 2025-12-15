@@ -8,6 +8,11 @@ const node_path_1 = __importDefault(require("node:path"));
 const templateDir = node_path_1.default.resolve(__dirname, '..', 'templates');
 const frontendDir = node_path_1.default.resolve(__dirname, '..', 'frontend');
 const publicDir = node_path_1.default.resolve(__dirname, '..', 'public');
+const localesDir = node_path_1.default.resolve(__dirname, '..', 'locales');
+const publicDir = node_path_1.default.resolve(__dirname, '..', 'public');
+exports.templates = exports.apply = void 0;
+const node_path_1 = __importDefault(require("node:path"));
+const templateDir = node_path_1.default.resolve(__dirname, '..', 'templates');
 /**
  * Register the template override directory so Hydro can pick up
  * SolveAC-specific UI tweaks before falling back to the defaults.
@@ -41,5 +46,6 @@ exports.frontend = frontendDir;
 // Locales directory is exposed for Hydro's loader. Keep at least one valid
 // locale file in place (e.g., locales/en.yaml) to avoid runtime load errors.
 exports.locales = node_path_1.default.resolve(__dirname, '..', 'locales');
+exports.locales = localesDir;
 exports.publicDirPath = publicDir;
 exports.default = exports.apply;

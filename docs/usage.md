@@ -6,6 +6,7 @@
 
 - `frontend/`：SolveAC 的页面样式注入脚本（无需构建即可被 Hydro 加载）。
 - `locales/`：保留给后续国际化文案的目录（包含空的 `en.yaml`，防止 Hydro 报告“Locale load fail”）。
+- `locales/`：保留给后续国际化文案的目录。
 - `public/`：可选的静态资源目录。
 - `templates/`：需从 [Hydro 官方仓库](https://github.com/hydro-dev/Hydro/tree/master/packages/ui-default/templates) 拷贝的模板，以及 SolveAC 的页脚覆盖。
 
@@ -76,3 +77,4 @@ npm run build
 ## 工作方式
 - 插件会在加载时向 HydroUI 注入 `templates/` 目录，使运行时优先使用 SolveAC 提供的模板。
 - `templates/components/footer.html` 覆盖了默认页脚模板，从根源上移除了 `.footer__links` 行，无需额外的前端脚本清理。
+- `templates/components/footer.njk` 覆盖了默认页脚模板，从根源上移除了 `.footer__links` 行，无需额外的前端脚本清理。
