@@ -6,3 +6,5 @@ declare module 'node:path' {
 declare module 'node:url' {
   export function fileURLToPath(url: string): string;
 }
+
+declare const __dirname: string;

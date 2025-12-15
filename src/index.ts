@@ -1,4 +1,6 @@
 import path from 'node:path';
+
+const templateDir = path.resolve(__dirname, '..', 'templates');
 import { fileURLToPath } from 'node:url';
 
 const templateDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', 'templates');
